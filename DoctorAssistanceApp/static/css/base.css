@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* Override Bootstrap variables to customize the theme */
+:root {
+  --primary: #3a07f3;
+  --lightPrimary: #5c4cc4;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #0c0c0c;
+
+  /* Customize button styles */
+  --btn-border-radius: 0.5rem;
+  --btn-font-family: "Your Custom Font", sans-serif;
+
+  /* Customize card styles */
+  --card-border-radius: 1.25rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fafafa;
+
+}
+
+/* Customize button styles */
+.btn-primary,
+.btn-outline-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--lightPrimary);
+  border-color: var(--lightPrimary);
+}
+.btn-primary:active {
+  background-color: var(--lightPrimary);
+  border-color: var(--lightPrimary);
+}
+/* Customize navbar styles */
+.navbar {
+  background-color: var(--primary);
+}
+
+/* Customize navbar brand styles */
+.navbar-brand {
+  text-transform: capitalize;
+  font-size: 22px;
+  color: var(--light);
+  margin-left: 3%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.nav-link {
+  text-transform: capitalize;
+  font-size: 16px;
+  color: var(--light) !important;
+}
+.nav-link:hover {
+  font-weight: 600;
+}
+
+.nav-tabs {
+  .nav-link {
+    color: var(--primary) !important;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+/* .dropdown:hover .dropdown-menu {
+  display: block;
+
+} */
+/* Customize carousel item styles */
+.carousel-item {
+  height: 90vh;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.form-control {
+  border: 0.5px solid var(--primary);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Additional styling for focused form fields */
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(104, 73, 189, 0.25);
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-link {
+  color: var(--dark);
+}
+
+#imagePreview {
+  width: 200px; /* Set the desired width */
+  height: 200px; /* Set the desired height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth_background {
+  background-image: linear-gradient(
+      rgba(89, 41, 185, 0.6),
+      rgba(88, 45, 141, 0.6)
+    ),
+    url(../images/pexels-vidalbalielojrfotografia-3376799.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.scrollable-div {
+  overflow-y: auto;
+  padding: 10px;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ddd #fff; /* Firefox */
+}
+
+/* Webkit (Chrome, Safari) scrollbar customization */
+.scrollable-div::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.carousel-item {
+  height: 86vh;
+}
+
+.input-group-icon {
+  position: relative;
+}
+
+.input-group-icon input {
+  padding-right: 40px; /* Adjust as needed based on the icon size */
+}
+
+.input-group-icon .input-group-text {
+  position: absolute;
+  top: 50%;
+  right: 12px; /* Adjust the distance from the input field */
+  transform: translateY(-50%);
+  color: var(--primary); /* Adjust the icon color */
+  background-color: transparent;
+  border: none;
+}
+.video-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.video-container .caption {
+  z-index: 1;
+  position: relative;
+  padding: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the values for the desired shadow effect */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.scrolling-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  display: flex;
+}
+

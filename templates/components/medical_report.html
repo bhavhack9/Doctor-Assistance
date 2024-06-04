@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .application-name {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .user-details {
+            margin-bottom: 5px;
+        }
+
+        .predicted-disease {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .signature-container {
+            margin-top: 50px;
+            text-align: right;
+        }
+
+        .signature-line {
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+            width: 300px;
+            display: inline-block;
+        }
+
+        /* Style the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* Center-align the h1 element */
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="application-name">
+            Medical Diagnosis Application
+        </div>
+        <div class="user-details">
+            <div>Name: {{ user.name }}</div>
+            <div>D.O.B: {{ user.dob }}</div>
+            <div>Gender: {{ user.gender }}</div>
+            <div>Contact: {{ user.contact }}</div>
+            <div>Address: {{ user.address }}</div>
+        </div>
+        <h1 class="text-center">Medical Report</h1>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        <td>{{ item.question }}</td>
+                        <td>{{ item.answer }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="predicted-disease">
+            Predicted Disease: {{ disease }}<br>
+            Probability: {{prob}}%
+        </div>
+        <div class="signature-container">
+            <div>Doctor's Signature:</div>
+            <div class="signature-line"></div>
+        </div>
+    </div>
+</body>
+
+</html>
